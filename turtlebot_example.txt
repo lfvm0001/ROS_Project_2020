@@ -1,0 +1,31 @@
+This txt file contains all the step to install and run the turtlebot example.
+The steps were taken from: https://automaticaddison.com/how-to-launch-the-turtlebot3-simulation-with-ros/
+
+1. Install dependent packages
+
+    cd ~/catkin_turtlebot3/
+    mkdir src
+    git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+    git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+    cd ~/catkin_turtlebot3 && catkin_make
+
+2. Adding turtlebot3 model to the bashrc file
+
+    open "~/.bashrc" file and add the following line at the end of the file: export TURTLEBOT3_MODEL=burger
+
+    source ~/.bashrc
+
+3. Download turtlebot simulation files
+
+    cd ~/catkin_ws/src/
+    git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+    cd ~/catkin_ws && catkin_make
+
+4. Simulation of turtlebot
+
+    source devel/setup.bash
+    roslaunch turtlebot3_fake turtlebot3_fake.launch
+
+    Note: If you want to move the turtlebot, open a new terminal, source the setup.bashrc file and run:
+
+      roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
