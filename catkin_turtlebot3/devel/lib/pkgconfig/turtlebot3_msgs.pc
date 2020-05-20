@@ -1,0 +1,8 @@
+prefix=/home/jose/ROS_Project_2020/catkin_turtlebot3/devel
+
+Name: turtlebot3_msgs
+Description: Description of turtlebot3_msgs
+Version: 1.0.0
+Cflags: -I/home/jose/ROS_Project_2020/catkin_turtlebot3/devel/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs message_runtime
