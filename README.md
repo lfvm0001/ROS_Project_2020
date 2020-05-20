@@ -1,11 +1,11 @@
 # ROS_Project_2020 
 Robotics project for mecathronics master
  
-By
-	Jose Pablo Arias Valverde
-	Lorna Francini Vargas Monge
+By /n
+	Jose Pablo Arias Valverde /n
+	Lorna Francini Vargas Monge /n
 
-For ROS installation refer to ROS_installation.txt
-For turtlebot example refer to turtlebot_example.txt
+For ROS installation refer to ROS_installation.txt /n
+For turtlebot example refer to turtlebot_example.txt /n
 
 
