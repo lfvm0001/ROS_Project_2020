@@ -5,6 +5,7 @@ The steps were taken from: https://automaticaddison.com/how-to-launch-the-turtle
 
     cd ~/catkin_turtlebot3/
     mkdir src
+    cd src/
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
     git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
     cd ~/catkin_turtlebot3 && catkin_make
@@ -26,6 +27,6 @@ The steps were taken from: https://automaticaddison.com/how-to-launch-the-turtle
     source devel/setup.bash
     roslaunch turtlebot3_fake turtlebot3_fake.launch
 
-    Note: If you want to move the turtlebot, open a new terminal, source the setup.bashrc file and run:
+    Note: If you want to move the turtlebot, open a new terminal, source the devel/setup.bash file and run:
 
       roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
