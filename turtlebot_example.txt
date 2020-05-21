@@ -4,8 +4,8 @@ The steps were taken from: https://automaticaddison.com/how-to-launch-the-turtle
 1. Install dependent packages
 Create the next directory where you want to have the turtlebot example:
 
-    mkdir /catkin_turtlebot3
-    cd /catkin_turtlebot3/
+    mkdir ./catkin_turtlebot3
+    cd ./catkin_turtlebot3/
     mkdir src
     cd src/
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
@@ -20,7 +20,7 @@ Create the next directory where you want to have the turtlebot example:
 
 3. Download turtlebot simulation files
 
-    cd /catkin_turtlebot3/src/
+    cd ./catkin_turtlebot3/src/
     git clone https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
     cd ../ && catkin_make
 
