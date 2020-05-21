@@ -1,0 +1,1 @@
+/home/jose/ROS_Project_2020/moveit_ws/devel/.private/catkin_tools_prebuild/_setup_util.py
