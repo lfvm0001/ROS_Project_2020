@@ -54,6 +54,8 @@ class SM_movement:
         global going
         global dir
 
+        delay=0
+
 ###################Logica de los estados#########################
         if (current_state==0):
             going=True
@@ -77,24 +79,13 @@ class SM_movement:
                     next_state=2
                 else:
                     next_state=3
-            else:
-                if(abs(angle_origin-yaw)>0.1):
-                    next_state=2
-                else:
-                    next_state=3
             state_output=2
 
         elif(current_state==3):
             if (going==True):
-                if(abs(angle_target-yaw)>0.001):
+                if(abs(angle_target-yaw)>0.005):
                     next_state=3
                 else:
-                    next_state=4
-            else:
-                if(abs(angle_origin-yaw)>0.001):
-                    next_state=3
-                else:
-                    print("Passing to state 4")
                     next_state=4
             state_output=3
 
@@ -104,20 +95,25 @@ class SM_movement:
             elif ((going==False) and (abs(dist_origin-dist_actual)>0.05)):
                 next_state=4
             else:
-                if (going):
-                    going=False
-                    next_state=1
-                else:
-                    next_state=5
+                next_state=5
             state_output=4
 
         elif(current_state==5):
-            going==True
-            next_state=0
+            if (going==False):
+                next_state=6
+            else:
+                delay=5
+                going=False
+                next_state=4
             state_output=5
 
+        elif(current_state==6):
+            going==True
+            next_state=0
+            state_output=6
+
         else:
-            current_state=0
+            next_state=0
 
 ######################## Salidas ##################################
 
@@ -128,6 +124,7 @@ class SM_movement:
         elif (state_output==1):
 
             output='Getting path'
+            delay=5
 
         elif (state_output==2):
 
@@ -145,12 +142,21 @@ class SM_movement:
 
             output='Translating'
             speed=0.3
-            self.movement_cmd(True,dir,speed)
+            if (going==False):
+                self.movement_cmd(True,dir,-speed)
+            else:
+                self.movement_cmd(True,dir,speed)
 
         elif (state_output==5):
+
+            output='Leaving piece'
+            self.movement_cmd(True,"stop",0)
+
+        elif (state_output==6):
 
             output='Ready'
             self.movement_cmd(True,"stop",0)
 
         current_state=next_state
-        return output
+        print("Current state: ",current_state)
+        return output, delay
