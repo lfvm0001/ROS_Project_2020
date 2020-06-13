@@ -5,6 +5,7 @@ import os.path
 import cv2
 import sys
 import random
+import os
 import numpy as np
 from std_msgs.msg import String
 
@@ -31,7 +32,13 @@ class ObjectChecker(object):
                 
             file_number = img_list[index_list]
             file_name = str(file_number) + ".jpg"
-            data_folder = "/home/tini/Documents/Imagenes/"
+            
+            current_file = os.path.realpath(__file__)
+            current_file = os.path.dirname(current_file)
+
+            data_folder = "./Images"
+            data_folder = os.path.join(current_file, data_folder) 
+            
             img_path = os.path.join(data_folder, file_name) 
     
             if os.path.isfile(img_path):
@@ -79,11 +86,14 @@ class ObjectChecker(object):
                         mean = cv2.mean(imgGray, mask=mask)
             
                         if mean[0] > 59:
-                            shape = "wood_rectangle"
+                            #shape = "wood_rectangle"
+                            shape = "rectangle"
                         elif mean[0] > 56 and mean[0] < 59:
-                            shape = "red_rectangle"
+                            #shape = "red_rectangle"
+                            shape = "rectangle"
                         else:
-                            shape = "white_rectangle"
+                            #shape = "white_rectangle"
+                            shape = "rectangle"
                 
                 else:
                     shape = "unidentified"
@@ -103,7 +113,7 @@ def main():
     pub = rospy.Publisher('obj_detector', String, queue_size=10)
     checker = ObjectChecker(pub) 
     
-    rospy.Subscriber("ready_flag", String, checker.identifier)
+    rospy.Subscriber("robot_status", String, checker.identifier)
     rospy.spin()
 
 if __name__ == '__main__':
