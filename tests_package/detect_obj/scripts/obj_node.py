@@ -14,8 +14,9 @@ img_list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
    
    
 class ObjectChecker(object):
-    def __init__(self,pub):
+    def __init__(self,pub,pub_img):
         self._pub=pub
+        self._pub_img=pub_img
         
     def identifier(self, msg):
     
@@ -94,24 +95,31 @@ class ObjectChecker(object):
                         else:
                             #shape = "white_rectangle"
                             shape = "rectangle"
-                
+                    
                 else:
-                    shape = "unidentified"
-    
+                    shape = "unidentified" 
+                
+                img_to_show = "show.jpg"
+                img_to_show = os.path.join(data_folder, img_to_show)
+                cv2.imwrite(img_to_show,img)
+                self._pub_img.publish("Show")
+               
             else:
                 shape = "unidentified"
     
         index_list = index_list + 1 
         rospy.loginfo(shape)
         self._pub.publish(shape)
-   
-   
+        
+
+ 
 def main():    
     
     rospy.init_node('obj_node', anonymous=True)
     
     pub = rospy.Publisher('obj_detector', String, queue_size=10)
-    checker = ObjectChecker(pub) 
+    pub_img = rospy.Publisher('show_img', String, queue_size=10)
+    checker = ObjectChecker(pub,pub_img) 
     
     rospy.Subscriber("robot_status", String, checker.identifier)
     rospy.spin()
