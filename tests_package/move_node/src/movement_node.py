@@ -46,7 +46,7 @@ class movement_node:
             angle_origin-=(2*math.pi)
 
         if (go==1):
-            r_st=mv_control.SM_states(self._pub,True,yaw,self.angle_target,angle_origin,dist_target,dist_origin,dist_actual)
+            r_st=mv_control.SM_states(self._pub,True,yaw,self.angle_target,angle_origin,self.dist_target,dist_origin,dist_actual)
             rospy.loginfo('Estado del robot: {}'.format(r_st))
 
         if (r_st=="Ready" or (go==0)):
@@ -56,15 +56,18 @@ class movement_node:
 
     def element_selection(self,msg):
         global go
+        msg=msg.data
+        
         if (msg!="Done"):
+
             if (msg=="rectangle"):
                 element=self._estaciones[0]
             elif(msg=="triangle"):
                 element=self._estaciones[1]
             elif(msg=="square"):
                 element=self._estaciones[2]
-            elif(msg=="triangle"):
-                element=self._estaciones[0]
+            elif(msg=="bridge"):
+                element=self._estaciones[3]
 
             x=element[1]
             y=element[2]
@@ -93,7 +96,7 @@ def main():
     rospy.init_node('robot_move')
     pub = rospy.Publisher('/cmd_vel',Twist,queue_size=10)
     pub_done = rospy.Publisher('/robot_status',String, queue_size=10)
-    rate=rospy.Rate(1)
+    rate=rospy.Rate(10)
 
     monitor=movement_node(pub, estaciones, pub_done)
 
