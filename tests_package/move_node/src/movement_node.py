@@ -9,8 +9,9 @@ from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 import time
 
-go=0
+fig=True
 r_st=""
+go=0
 
 class movement_node:
 
@@ -22,7 +23,9 @@ class movement_node:
         self.dist_target=0
 
     def position_notify(self,msg):
+
         global go
+        global fig
         global r_st
 
         mv_control=SM_movement(self._pub)
@@ -53,11 +56,15 @@ class movement_node:
 
         if (r_st=="Ready" or (go==0)):
             go=0
-            self._pub_done.publish("Ready")
+            if fig==True:
+                self._pub_done.publish("Ready")
+                fig=False
             rospy.loginfo('Esperando pieza nueva')
 
     def element_selection(self,msg):
+        global fig
         global go
+
         msg=msg.data
 
         if (msg!="Done"):
@@ -79,12 +86,17 @@ class movement_node:
             if (self.angle_target<0):
                 self.angle_target+=(2*math.pi)
             go=1
+            fig=True
 
         elif (msg=="unidentified"):
             rospy.loginfo('Elemento no identificado')
+            go=0
+            fig=False
 
         else:
             rospy.loginfo('Se finalizo la ejecucion')
+            go=0
+            fig=False
 
 def main():
 

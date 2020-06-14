@@ -158,5 +158,4 @@ class SM_movement:
             self.movement_cmd(True,"stop",0)
 
         current_state=next_state
-        print("Current state: ",current_state)
         return output, delay
