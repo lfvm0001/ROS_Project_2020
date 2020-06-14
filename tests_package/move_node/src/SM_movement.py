@@ -60,7 +60,7 @@ class SM_movement:
             vel.linear.x=speed
 
         elif (dir=="stop"):
-            print("Dejando pieza")
+            print("Positioning piece")
 
         self._pub.publish(vel)
 
@@ -135,7 +135,7 @@ class SM_movement:
 
         if (state_output==0):
 
-            output="waiting request"
+            output="Waiting request"
 
         elif (state_output==1):
 
@@ -144,7 +144,7 @@ class SM_movement:
 
         elif (state_output==2):
 
-            output='rotating'
+            output='Rotating'
             speed=0.5
             self.movement_cmd(False,dir,speed)
 
@@ -156,7 +156,7 @@ class SM_movement:
 
         elif (state_output==4):
 
-            output='Translating'
+            output='Moving'
             speed=0.3
             if (going==False):
                 self.movement_cmd(True,dir,-speed)

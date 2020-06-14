@@ -10,7 +10,7 @@ import numpy as np
 from std_msgs.msg import String
 
 index_list = 0
-img_list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+img_list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
    
    
 class ObjectChecker(object):
@@ -23,7 +23,7 @@ class ObjectChecker(object):
         global index_list
         global img_list
         
-        if index_list >= 17:
+        if index_list >= 14:
             shape="Done"
         
         else:
@@ -37,7 +37,7 @@ class ObjectChecker(object):
             current_file = os.path.realpath(__file__)
             current_file = os.path.dirname(current_file)
 
-            data_folder = "./Images"
+            data_folder = "Images"
             data_folder = os.path.join(current_file, data_folder) 
             
             img_path = os.path.join(data_folder, file_name) 
@@ -102,7 +102,7 @@ class ObjectChecker(object):
                 img_to_show = "show.jpg"
                 img_to_show = os.path.join(data_folder, img_to_show)
                 cv2.imwrite(img_to_show,img)
-                self._pub_img.publish("Show")
+                self._pub_img.publish(img_to_show)
                
             else:
                 shape = "unidentified"
@@ -115,7 +115,7 @@ class ObjectChecker(object):
  
 def main():    
     
-    rospy.init_node('obj_node', anonymous=True)
+    rospy.init_node('obj_node')
     
     pub = rospy.Publisher('obj_detector', String, queue_size=10)
     pub_img = rospy.Publisher('show_img', String, queue_size=10)

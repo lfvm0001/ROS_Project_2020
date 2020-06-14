@@ -51,15 +51,15 @@ class movement_node:
 
         if (go==1):
             r_st,delay=mv_control.SM_states(self._pub,True,yaw,self.angle_target,angle_origin,self.dist_target,dist_origin,dist_actual)
-            rospy.loginfo('Estado del robot: {}'.format(r_st))
+            rospy.loginfo('State: {}'.format(r_st))
             time.sleep(delay)
 
         if (r_st=="Ready" or (go==0)):
             go=0
             if fig==True:
                 self._pub_done.publish("Ready")
-                fig=False
-            rospy.loginfo('Esperando pieza nueva')
+                fig=True
+                rospy.loginfo('Wating for a new piece')
 
     def element_selection(self,msg):
         global fig
@@ -69,32 +69,33 @@ class movement_node:
 
         if (msg!="Done"):
 
-            if (msg=="rectangle"):
-                element=self._estaciones[0]
-            elif(msg=="triangle"):
-                element=self._estaciones[1]
-            elif(msg=="square"):
-                element=self._estaciones[2]
-            elif(msg=="bridge"):
-                element=self._estaciones[3]
+            if (msg=="unidentified"):
+                rospy.loginfo(' Unidentified element')
+                go=0
+                fig=True
+                
+            else:    
+                if (msg=="rectangle"):
+                    element=self._estaciones[0]
+                elif(msg=="triangle"):
+                    element=self._estaciones[1]
+                elif(msg=="square"):
+                    element=self._estaciones[2]
+                elif(msg=="bridge"):
+                    element=self._estaciones[3]
 
-            x=element[1]
-            y=element[2]
-            self.dist_target=math.sqrt(x*x+y*y)
-            self.angle_target=math.atan(y/(x+0.0000001))
+                x=element[1]
+                y=element[2]
+                self.dist_target=math.sqrt(x*x+y*y)
+                self.angle_target=math.atan(y/(x+0.0000001))
 
-            if (self.angle_target<0):
-                self.angle_target+=(2*math.pi)
-            go=1
-            fig=True
-
-        elif (msg=="unidentified"):
-            rospy.loginfo('Elemento no identificado')
-            go=0
-            fig=False
+                if (self.angle_target<0):
+                    self.angle_target+=(2*math.pi)
+                go=1
+                fig=True
 
         else:
-            rospy.loginfo('Se finalizo la ejecucion')
+            rospy.loginfo('Finish')
             go=0
             fig=False
 
