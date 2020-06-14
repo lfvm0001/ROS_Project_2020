@@ -15,10 +15,26 @@ class SM_movement:
 
     def get_dir(self,angle_goal,angle_robot):
 
-        if (angle_goal<angle_robot):
-            dir="neg"
+        if (angle_goal>=angle_robot):
+            comp_target=2*math.pi-angle_goal
+            sub_arc=abs(angle_robot-angle_goal)
+            sum_arc=comp_target+angle_robot
         else:
-            dir="pos"
+            comp_target=2*math.pi-angle_robot
+            sub_arc=abs(angle_robot-angle_goal)
+            sum_arc=comp_target+angle_goal
+
+        if (angle_goal>=angle_robot):
+            if (sub_arc<sum_arc):
+                dir="pos"
+            else:
+                dir="neg"
+
+        else:
+            if (sub_arc<sum_arc):
+                dir="neg"
+            else:
+                dir="pos"
 
         return dir
 
@@ -56,7 +72,7 @@ class SM_movement:
 
         delay=0
 
-###################Logica de los estados#########################
+        ###################Logica de los estados#########################
         if (current_state==0):
             going=True
             if start==True:
@@ -115,7 +131,7 @@ class SM_movement:
         else:
             next_state=0
 
-######################## Salidas ##################################
+        ######################## Salidas ##################################
 
         if (state_output==0):
 
