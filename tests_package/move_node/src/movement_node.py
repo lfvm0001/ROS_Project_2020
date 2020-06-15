@@ -49,6 +49,11 @@ class movement_node:
         if (angle_origin>2*math.pi):
             angle_origin-=(2*math.pi)
 
+        if (self.angle_target==0 and yaw>=math.pi):
+            self.angle_target=2*math.pi
+        else:
+            angle_target=0
+
         if (go==1):
             r_st,delay=mv_control.SM_states(self._pub,True,yaw,self.angle_target,angle_origin,self.dist_target,dist_origin,dist_actual)
             rospy.loginfo('State: {}'.format(r_st))
@@ -69,30 +74,50 @@ class movement_node:
 
         if (msg!="Done"):
 
-            if (msg=="unidentified"):
+            if(msg!="unidentified"):
+
+                for e_name, e_x, e_y in self._estaciones:
+                    print("Mensaje: ", msg)
+                    print("e_name: ",msg)
+
+                    if (e_name==msg):
+
+                        self.dist_target=math.sqrt(e_x*e_x+e_y*e_y)
+                        self.angle_target=math.atan(e_y/(e_x+0.0000001))
+
+                        if (self.angle_target<0):
+                            self.angle_target+=(2*math.pi)
+                        go=1
+                        fig=True
+            else:
                 rospy.loginfo(' Unidentified element')
                 go=0
                 fig=True
-                
-            else:    
-                if (msg=="rectangle"):
-                    element=self._estaciones[0]
-                elif(msg=="triangle"):
-                    element=self._estaciones[1]
-                elif(msg=="square"):
-                    element=self._estaciones[2]
-                elif(msg=="bridge"):
-                    element=self._estaciones[3]
 
-                x=element[1]
-                y=element[2]
-                self.dist_target=math.sqrt(x*x+y*y)
-                self.angle_target=math.atan(y/(x+0.0000001))
-
-                if (self.angle_target<0):
-                    self.angle_target+=(2*math.pi)
-                go=1
-                fig=True
+#            if (msg=="unidentified"):
+#                rospy.loginfo(' Unidentified element')
+#                go=0
+#                fig=True
+#
+#            else:
+#                if (msg=="rectangle"):
+#                    element=self._estaciones[0]
+#                elif(msg=="triangle"):
+#                    element=self._estaciones[1]
+#                elif(msg=="square"):
+#                    element=self._estaciones[2]
+#                elif(msg=="bridge"):
+#                    element=self._estaciones[3]
+#
+#                x=element[1]
+#                y=element[2]
+#                self.dist_target=math.sqrt(x*x+y*y)
+#                self.angle_target=math.atan(y/(x+0.0000001))
+#
+#                if (self.angle_target<0):
+#                    self.angle_target+=(2*math.pi)
+#                go=1
+#                fig=True
 
         else:
             rospy.loginfo('Finish')
@@ -102,10 +127,11 @@ class movement_node:
 def main():
 
     estaciones=[]
-    estaciones.append(("box rectangle", 2, 2))
-    estaciones.append(("box triangle", -2, 2))
-    estaciones.append(("box square", 0, -2))
-    estaciones.append(("box bridge", 0, 2))
+    estaciones.append(("wood_rectangle", 2, 2))
+    estaciones.append(("red_rectangle", 2, 0))
+    estaciones.append(("triangle", -2, 2))
+    estaciones.append(("square", 0, -2))
+    estaciones.append(("bridge", 0, 2))
 
     rospy.init_node('robot_move')
     pub = rospy.Publisher('/cmd_vel',Twist,queue_size=10)

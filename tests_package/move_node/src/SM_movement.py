@@ -106,9 +106,9 @@ class SM_movement:
             state_output=3
 
         elif(current_state==4):
-            if ((going==True) and (abs(dist_target-dist_actual)>0.05)):
+            if ((going==True) and (abs(dist_target-dist_actual)>0.025)):
                 next_state=4
-            elif ((going==False) and (abs(dist_origin-dist_actual)>0.05)):
+            elif ((going==False) and (abs(dist_origin-dist_actual)>0.025)):
                 next_state=4
             else:
                 next_state=5
