@@ -111,6 +111,25 @@ while not rospy.is_shutdown():
    marker_triangle.pose.position.y = -2.25
    marker_triangle.pose.position.z = 0.1
 
+   marker_storage = Marker()
+   marker_storage.header.frame_id = "/odom"
+   marker_storage.type = marker_wood_rectangle.CUBE
+   marker_storage.action = marker_wood_rectangle.ADD
+   marker_storage.scale.x = 0.2
+   marker_storage.scale.y = 1.5
+   marker_storage.scale.z = 0.1
+   marker_storage.color.a = 1.0
+   marker_storage.color.r = 0
+   marker_storage.color.g = 0
+   marker_storage.color.b = 0
+   marker_storage.pose.orientation.w = 1
+   marker_storage.pose.orientation.z = 0.0
+   marker_storage.pose.orientation.y=0.0
+   marker_storage.pose.orientation.x=0.0
+   marker_storage.pose.position.x = -0.25
+   marker_storage.pose.position.y = 0
+   marker_storage.pose.position.z = 0.05
+
    # We add the new marker to the MarkerArray, removing the oldest
    # marker from it when necessary
 
@@ -119,6 +138,7 @@ while not rospy.is_shutdown():
    markerArray.markers.append(marker_square)
    markerArray.markers.append(marker_triangle)
    markerArray.markers.append(marker_bridge)
+   markerArray.markers.append(marker_storage)
 
    # Renumber the marker IDs
    id = 0
