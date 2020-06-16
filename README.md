@@ -6,8 +6,8 @@ Sistemas Robóticos
 
 Robotics project, using ROS and OpenCV  
 By  
-	* Jose Pablo Arias Valverde   
-	* Lorna Francini Vargas Monge  
+	&nbsp; Jose Pablo Arias Valverde   
+	&nbsp; Francini Vargas Monge  
 	
 Refer to wiki for installation and test  
 https://github.com/lfvm0001/ROS_Project_2020/wiki
