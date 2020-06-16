@@ -1,0 +1,228 @@
+[rosmaster.main][INFO] 2020-06-16 16:21:08,436: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2020-06-16 16:21:08,436: Starting ROS Master Node
+[xmlrpc][INFO] 2020-06-16 16:21:08,437: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2020-06-16 16:21:08,437: Started XML-RPC server [http://jose-Lenovo-V110-15AST:11311/]
+[rosmaster.master][INFO] 2020-06-16 16:21:08,437: Master initialized: port[11311], uri[http://jose-Lenovo-V110-15AST:11311/]
+[xmlrpc][INFO] 2020-06-16 16:21:08,438: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2020-06-16 16:21:08,466: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2020-06-16 16:21:08,468: +PARAM [/roslaunch/uris/host_jose_lenovo_v110_15ast__35603] by /roslaunch
+[rosmaster.master][INFO] 2020-06-16 16:21:08,598: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2020-06-16 16:21:08,599: +PARAM [/robot_description] by /roslaunch
+[rosmaster.master][INFO] 2020-06-16 16:21:08,599: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2020-06-16 16:21:08,599: +PARAM [/tb3_model] by /roslaunch
+[rosmaster.master][INFO] 2020-06-16 16:21:08,599: +PARAM [/robot_state_publisher/publish_frequency] by /roslaunch
+[rosmaster.master][INFO] 2020-06-16 16:21:08,985: +SERVICE [/rosout/get_loggers] /rosout http://jose-Lenovo-V110-15AST:42629/
+[rosmaster.master][INFO] 2020-06-16 16:21:08,992: +SERVICE [/rosout/set_logger_level] /rosout http://jose-Lenovo-V110-15AST:42629/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,004: +PUB [/rosout] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,005: +PUB [/rosout_agg] /rosout http://jose-Lenovo-V110-15AST:42629/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,008: +SERVICE [/turtlebot3_fake_node/get_loggers] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,009: +SERVICE [/turtlebot3_fake_node/set_logger_level] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,014: +SUB [/rosout] /rosout http://jose-Lenovo-V110-15AST:42629/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,023: +PUB [/tf] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,055: +PUB [/joint_states] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,056: +PUB [/odom] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,074: +SUB [/cmd_vel] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,094: +PUB [/rosout] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,095: +SERVICE [/robot_state_publisher/get_loggers] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,098: +SERVICE [/robot_state_publisher/set_logger_level] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,110: +PUB [/tf] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,112: +PUB [/tf_static] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:09,138: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/']
+[rosmaster.master][INFO] 2020-06-16 16:21:09,141: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:09,156: +SUB [/joint_states] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,250: +PUB [/rosout] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,263: +SERVICE [/rviz/get_loggers] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,266: +SERVICE [/rviz/set_logger_level] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,343: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/']
+[rosmaster.master][INFO] 2020-06-16 16:21:10,345: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:10,859: +PUB [/rosout] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,873: +SERVICE [/obj_node/get_loggers] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,875: +SERVICE [/obj_node/set_logger_level] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,877: +PUB [/obj_detector] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,879: +PUB [/ready_img] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,883: +SUB [/robot_status] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:10,945: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/']
+[rosmaster.master][INFO] 2020-06-16 16:21:10,948: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:11,263: +PUB [/rosout] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,273: +SERVICE [/show_img/get_loggers] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,276: +SERVICE [/show_img/set_logger_level] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,280: +PUB [/img_rviz] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,285: +SUB [/ready_img] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,347: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/']
+[rosmaster.master][INFO] 2020-06-16 16:21:11,349: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:11,531: +SUB [/tf] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,535: +SUB [/tf_static] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,575: +PUB [/visualization_marker_array] /register http://jose-Lenovo-V110-15AST:33523/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,652: +PUB [/rosout] /register http://jose-Lenovo-V110-15AST:33523/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,662: +PUB [/initialpose] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,665: +PUB [/goal] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,666: +SERVICE [/register/get_loggers] /register http://jose-Lenovo-V110-15AST:33523/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,668: +SERVICE [/register/set_logger_level] /register http://jose-Lenovo-V110-15AST:33523/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,749: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/']
+[rosmaster.master][INFO] 2020-06-16 16:21:11,751: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:11,915: +PUB [/rosout] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,920: +SERVICE [/robot_move/get_loggers] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,923: +SERVICE [/robot_move/set_logger_level] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,926: +PUB [/cmd_vel] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,928: +PUB [/robot_status] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,932: +SUB [/odom] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,937: +SUB [/obj_detector] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:11,951: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/', 'http://jose-Lenovo-V110-15AST:43543/']
+[rosmaster.master][INFO] 2020-06-16 16:21:11,952: publisherUpdate[/cmd_vel] -> http://jose-Lenovo-V110-15AST:39847/ ['http://jose-Lenovo-V110-15AST:43543/']
+[rosmaster.master][INFO] 2020-06-16 16:21:11,953: publisherUpdate[/robot_status] -> http://jose-Lenovo-V110-15AST:35997/ ['http://jose-Lenovo-V110-15AST:43543/']
+[rosmaster.master][INFO] 2020-06-16 16:21:11,955: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/', 'http://jose-Lenovo-V110-15AST:43543/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:11,956: publisherUpdate[/cmd_vel] -> http://jose-Lenovo-V110-15AST:39847/ ['http://jose-Lenovo-V110-15AST:43543/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:11,960: publisherUpdate[/robot_status] -> http://jose-Lenovo-V110-15AST:35997/ ['http://jose-Lenovo-V110-15AST:43543/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:12,233: +SUB [/visualization_marker] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,236: +SUB [/visualization_marker_array] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,436: +SUB [/img_rviz] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,439: -PUB [/goal] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,441: -PUB [/initialpose] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,448: +PUB [/initialpose] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,450: +PUB [/goal] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,451: +PUB [/move_base_simple/goal] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,452: -PUB [/goal] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,454: +PUB [/clicked_point] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,540: +SERVICE [/rviz/reload_shaders] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,541: +SERVICE [/rviz/load_config] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:12,542: +SERVICE [/rviz/save_config] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,322: -SUB [/obj_detector] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,322: -SUB [/odom] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,323: -PUB [/robot_status] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,323: -PUB [/rosout] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,323: -PUB [/cmd_vel] /robot_move http://jose-Lenovo-V110-15AST:43543/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,324: -SERVICE [/robot_move/set_logger_level] /robot_move rosrpc://jose-Lenovo-V110-15AST:34363
+[rosmaster.master][INFO] 2020-06-16 16:21:36,324: -SERVICE [/robot_move/get_loggers] /robot_move rosrpc://jose-Lenovo-V110-15AST:34363
+[rosmaster.master][INFO] 2020-06-16 16:21:36,329: -SUB [/robot_status] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,329: -PUB [/obj_detector] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,330: -PUB [/rosout] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,330: -PUB [/ready_img] /obj_node http://jose-Lenovo-V110-15AST:35997/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,333: -SERVICE [/obj_node/set_logger_level] /obj_node rosrpc://jose-Lenovo-V110-15AST:35595
+[rosmaster.master][INFO] 2020-06-16 16:21:36,334: -SERVICE [/obj_node/get_loggers] /obj_node rosrpc://jose-Lenovo-V110-15AST:35595
+[rosmaster.master][INFO] 2020-06-16 16:21:36,353: -SUB [/ready_img] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,353: -PUB [/rosout] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,354: -PUB [/img_rviz] /show_img http://jose-Lenovo-V110-15AST:33251/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,354: -SERVICE [/show_img/get_loggers] /show_img rosrpc://jose-Lenovo-V110-15AST:39281
+[rosmaster.master][INFO] 2020-06-16 16:21:36,354: -SERVICE [/show_img/set_logger_level] /show_img rosrpc://jose-Lenovo-V110-15AST:39281
+[rosmaster.master][INFO] 2020-06-16 16:21:36,357: -PUB [/rosout] /register http://jose-Lenovo-V110-15AST:33523/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,357: -PUB [/visualization_marker_array] /register http://jose-Lenovo-V110-15AST:33523/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,357: -SERVICE [/register/get_loggers] /register rosrpc://jose-Lenovo-V110-15AST:38651
+[rosmaster.master][INFO] 2020-06-16 16:21:36,357: -SERVICE [/register/set_logger_level] /register rosrpc://jose-Lenovo-V110-15AST:38651
+[rosmaster.master][INFO] 2020-06-16 16:21:36,414: publisherUpdate[/robot_status] -> http://jose-Lenovo-V110-15AST:35997/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,414: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/']
+[rosmaster.master][INFO] 2020-06-16 16:21:36,414: publisherUpdate[/cmd_vel] -> http://jose-Lenovo-V110-15AST:39847/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,418: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:35997/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,419: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/']
+[rosmaster.master][INFO] 2020-06-16 16:21:36,420: publisherUpdate[/cmd_vel] -> http://jose-Lenovo-V110-15AST:39847/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,420: publisherUpdate[/ready_img] -> http://jose-Lenovo-V110-15AST:33251/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,422: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:33251/', 'http://jose-Lenovo-V110-15AST:33523/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,422: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:33523/']
+[rosmaster.master][INFO] 2020-06-16 16:21:36,424: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/', 'http://jose-Lenovo-V110-15AST:33523/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,424: publisherUpdate[/img_rviz] -> http://jose-Lenovo-V110-15AST:43855/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,425: publisherUpdate[/img_rviz] -> http://jose-Lenovo-V110-15AST:43855/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,425: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/']
+[rosmaster.master][INFO] 2020-06-16 16:21:36,426: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:33475/', 'http://jose-Lenovo-V110-15AST:43855/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,427: publisherUpdate[/visualization_marker_array] -> http://jose-Lenovo-V110-15AST:43855/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,427: publisherUpdate[/visualization_marker_array] -> http://jose-Lenovo-V110-15AST:43855/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,467: publisherUpdate[/ready_img] -> http://jose-Lenovo-V110-15AST:33251/ []: sec=0.05, exception=[Errno 111] Connection refused
+[rosmaster.threadpool][ERROR] 2020-06-16 16:21:36,468: Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1311, in single_request
+    self.send_content(h, request_body)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1459, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python2.7/httplib.py", line 1078, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 894, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 856, in send
+    self.connect()
+  File "/usr/lib/python2.7/httplib.py", line 833, in connect
+    self.timeout, self.source_address)
+  File "/usr/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+
+[rosmaster.master][INFO] 2020-06-16 16:21:36,505: -PUB [/rosout] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,506: -PUB [/tf] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,507: -PUB [/tf_static] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,509: publisherUpdate[/robot_status] -> http://jose-Lenovo-V110-15AST:35997/ []: sec=0.09, exception=[Errno 111] Connection refused
+[rosmaster.threadpool][ERROR] 2020-06-16 16:21:36,510: Traceback (most recent call last):
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rosmaster/threadpool.py", line 218, in run
+    result = cmd(*args)
+  File "/opt/ros/melodic/lib/python2.7/dist-packages/rosmaster/master_api.py", line 210, in publisher_update_task
+    ret = xmlrpcapi(api).publisherUpdate('/master', topic, pub_uris)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1243, in __call__
+    return self.__send(self.__name, args)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1602, in __request
+    verbose=self.__verbose
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1283, in request
+    return self.single_request(host, handler, request_body, verbose)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1311, in single_request
+    self.send_content(h, request_body)
+  File "/usr/lib/python2.7/xmlrpclib.py", line 1459, in send_content
+    connection.endheaders(request_body)
+  File "/usr/lib/python2.7/httplib.py", line 1078, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python2.7/httplib.py", line 894, in _send_output
+    self.send(msg)
+  File "/usr/lib/python2.7/httplib.py", line 856, in send
+    self.connect()
+  File "/usr/lib/python2.7/httplib.py", line 833, in connect
+    self.timeout, self.source_address)
+  File "/usr/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+
+[rosmaster.master][INFO] 2020-06-16 16:21:36,510: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:43855/']
+[rosmaster.master][INFO] 2020-06-16 16:21:36,511: -SUB [/joint_states] /robot_state_publisher http://jose-Lenovo-V110-15AST:33475/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,513: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:39847/', 'http://jose-Lenovo-V110-15AST:43855/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,513: publisherUpdate[/tf] -> http://jose-Lenovo-V110-15AST:43855/ ['http://jose-Lenovo-V110-15AST:39847/']
+[rosmaster.master][INFO] 2020-06-16 16:21:36,514: -SERVICE [/robot_state_publisher/get_loggers] /robot_state_publisher rosrpc://jose-Lenovo-V110-15AST:51983
+[rosmaster.master][INFO] 2020-06-16 16:21:36,516: publisherUpdate[/tf] -> http://jose-Lenovo-V110-15AST:43855/ ['http://jose-Lenovo-V110-15AST:39847/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,516: publisherUpdate[/tf_static] -> http://jose-Lenovo-V110-15AST:43855/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,517: -SERVICE [/robot_state_publisher/set_logger_level] /robot_state_publisher rosrpc://jose-Lenovo-V110-15AST:51983
+[rosmaster.master][INFO] 2020-06-16 16:21:36,518: -PUB [/rosout] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,519: -PUB [/tf] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,521: -PUB [/joint_states] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,522: -PUB [/odom] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,524: -SUB [/cmd_vel] /turtlebot3_fake_node http://jose-Lenovo-V110-15AST:39847/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,525: -SERVICE [/turtlebot3_fake_node/get_loggers] /turtlebot3_fake_node rosrpc://jose-Lenovo-V110-15AST:54619
+[rosmaster.master][INFO] 2020-06-16 16:21:36,526: publisherUpdate[/tf_static] -> http://jose-Lenovo-V110-15AST:43855/ []: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,526: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:43855/']
+[rosmaster.master][INFO] 2020-06-16 16:21:36,528: publisherUpdate[/tf] -> http://jose-Lenovo-V110-15AST:43855/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,529: publisherUpdate[/tf] -> http://jose-Lenovo-V110-15AST:43855/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,529: -SERVICE [/turtlebot3_fake_node/set_logger_level] /turtlebot3_fake_node rosrpc://jose-Lenovo-V110-15AST:54619
+[rosmaster.master][INFO] 2020-06-16 16:21:36,530: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ ['http://jose-Lenovo-V110-15AST:43855/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,630: -PUB [/rosout] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,630: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ []
+[rosmaster.master][INFO] 2020-06-16 16:21:36,632: publisherUpdate[/rosout] -> http://jose-Lenovo-V110-15AST:42629/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2020-06-16 16:21:36,635: -PUB [/initialpose] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,636: -PUB [/move_base_simple/goal] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,638: -PUB [/clicked_point] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,639: -SUB [/tf] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,642: -SUB [/tf_static] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,643: -SUB [/visualization_marker] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,644: -SUB [/visualization_marker_array] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,645: -SUB [/img_rviz] /rviz http://jose-Lenovo-V110-15AST:43855/
+[rosmaster.master][INFO] 2020-06-16 16:21:36,647: -SERVICE [/rviz/get_loggers] /rviz rosrpc://jose-Lenovo-V110-15AST:35965
+[rosmaster.master][INFO] 2020-06-16 16:21:36,648: -SERVICE [/rviz/set_logger_level] /rviz rosrpc://jose-Lenovo-V110-15AST:35965
+[rosmaster.master][INFO] 2020-06-16 16:21:36,649: -SERVICE [/rviz/reload_shaders] /rviz rosrpc://jose-Lenovo-V110-15AST:35965
+[rosmaster.master][INFO] 2020-06-16 16:21:36,650: -SERVICE [/rviz/load_config] /rviz rosrpc://jose-Lenovo-V110-15AST:35965
+[rosmaster.master][INFO] 2020-06-16 16:21:36,651: -SERVICE [/rviz/save_config] /rviz rosrpc://jose-Lenovo-V110-15AST:35965
+[rosmaster.master][INFO] 2020-06-16 16:21:37,333: -PUB [/rosout_agg] /rosout http://jose-Lenovo-V110-15AST:42629/
+[rosmaster.master][INFO] 2020-06-16 16:21:37,334: -SUB [/rosout] /rosout http://jose-Lenovo-V110-15AST:42629/
+[rosmaster.master][INFO] 2020-06-16 16:21:37,335: -SERVICE [/rosout/get_loggers] /rosout rosrpc://jose-Lenovo-V110-15AST:43395
+[rosmaster.master][INFO] 2020-06-16 16:21:37,336: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://jose-Lenovo-V110-15AST:43395
+[rosmaster.main][INFO] 2020-06-16 16:21:37,358: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2020-06-16 16:21:37,358: stopping master...
+[rospy.core][INFO] 2020-06-16 16:21:37,359: signal_shutdown [atexit]
