@@ -106,27 +106,36 @@ class SM_movement:
             state_output=3
 
         elif(current_state==4):
-            if ((going==True) and (abs(dist_target-dist_actual)>0.025)):
+            if ((going==True) and (abs(dist_target-dist_actual)>0.1)):
                 next_state=4
-            elif ((going==False) and (abs(dist_origin-dist_actual)>0.025)):
+            elif ((going==False) and (abs(dist_origin-dist_actual)>0.1)):
                 next_state=4
             else:
                 next_state=5
             state_output=4
-
+        
         elif(current_state==5):
-            if (going==False):
+            if ((going==True) and (abs(dist_target-dist_actual)>0.005)):
+                next_state=5
+            elif ((going==False) and (abs(dist_origin-dist_actual)>0.005)):
+                next_state=5
+            else:
                 next_state=6
+            state_output=5
+
+        elif(current_state==6):
+            if (going==False):
+                next_state=7
             else:
                 delay=5
                 going=False
                 next_state=4
-            state_output=5
+            state_output=6
 
-        elif(current_state==6):
+        elif(current_state==7):
             going==True
             next_state=0
-            state_output=6
+            state_output=7
 
         else:
             next_state=0
@@ -145,7 +154,7 @@ class SM_movement:
         elif (state_output==2):
 
             output='Rotating'
-            speed=0.5
+            speed=0.75
             self.movement_cmd(False,dir,speed)
 
         elif (state_output==3):
@@ -157,18 +166,27 @@ class SM_movement:
         elif (state_output==4):
 
             output='Moving'
-            speed=0.3
+            speed=0.75
+            if (going==False):
+                self.movement_cmd(True,dir,-speed)
+            else:
+                self.movement_cmd(True,dir,speed)
+                
+        elif (state_output==5):
+
+            output='Fine Moving'
+            speed=0.05
             if (going==False):
                 self.movement_cmd(True,dir,-speed)
             else:
                 self.movement_cmd(True,dir,speed)
 
-        elif (state_output==5):
+        elif (state_output==6):
 
             output='Leaving piece'
             self.movement_cmd(True,"stop",0)
 
-        elif (state_output==6):
+        elif (state_output==7):
 
             output='Ready'
             self.movement_cmd(True,"stop",0)

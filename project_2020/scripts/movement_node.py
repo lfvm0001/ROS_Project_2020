@@ -59,12 +59,16 @@ class movement_node:
             rospy.loginfo('State: {}'.format(r_st))
             time.sleep(delay)
 
-        if (r_st=="Ready" or (go==0)):
+        if (r_st=="Ready" and (go==1)):
             go=0
             if fig==True:
                 self._pub_done.publish("Ready")
-                fig=True
-                rospy.loginfo('Wating for a new piece')
+                fig=False
+            rospy.loginfo('Wating for a new piece')
+                
+        elif (r_st!="Ready" and go==0):
+            self._pub_done.publish("Ready")
+            rospy.loginfo('Wating first piece')
 
     def element_selection(self,msg):
         global fig
