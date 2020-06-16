@@ -1,11 +1,12 @@
 # ROS_Project_2020 
-Robotics project for mecathronics master
- 
+
+Universidad de Jaén 
+Máster Universitario en Ing. Mecatrónica
+Sistemas Robóticos 
+
+Robotics project, using ROS and OpenCV
 By  
 	Jose Pablo Arias Valverde   
 	Lorna Francini Vargas Monge  
 	
-For ROS installation refer to ROS_installation.txt   
-For turtlebot example refer to turtlebot_example.txt 
-
-
+Refer to wiki for installation and test
