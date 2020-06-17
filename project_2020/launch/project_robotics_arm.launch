@@ -1,0 +1,23 @@
+<launch>
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+
+  <param name="tb3_model" value="$(arg model)"/>
+
+  <include file="$(find project_2020)/launch/includes/description.launch.xml">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node pkg="turtlebot3_fake" type="turtlebot3_fake_node" name="turtlebot3_fake_node" output="screen" />
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+    <param name="publish_frequency" type="double" value="50.0" />
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find project_2020)/rviz/turtlebot3_project.rviz"/>
+
+  <node name="register" pkg="project_2020" type="shapes.py"  />
+  <node name="show_img" pkg="project_2020" type="show_img.py"  />
+  <node name="obj_node" pkg="project_2020" type="obj_node.py" output="screen"  />
+  <node name="robot_move" pkg="project_2020" type="movement_node.py" />
+
+</launch>
